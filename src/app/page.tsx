@@ -11,7 +11,7 @@ export default function Home() {
   }
 
   return (
-    <main className={`flex flex-col text-sm items-center justify-between h-dvh w-full ${darkMode ? "dark" : "light"}`}>
+    <main className={`flex flex-col text-sm items-center justify-between h-dvh w-full md:text-base lg:text-lg xl:text-xl ${darkMode ? "dark" : "light"}`}>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
     </main>
   )
