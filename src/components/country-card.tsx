@@ -11,8 +11,8 @@ type CountryCardProps = {
 
 export function CountryCard({flagSrc, name, population, region, capital}: CountryCardProps) {
   return (
-    <div className="drop-shadow-md bg-white rounded-md dark:bg-primary-300">
-      <Image src={flagSrc} width={250} height={200} alt={`${name}'s flag`} className="rounded-t-md"/>
+    <div className="drop-shadow-md bg-white rounded-md w-64 dark:bg-primary-300">
+      <Image src={flagSrc} width={256} height={256} alt={`${name}'s flag`} className="rounded-t-md w-auto h-auto" loading='eager'/>
       <div className="p-6 space-y-2">
         <h1 className="font-bold text-base pb-2">{name}</h1>
         <p className="font-semibold">Population: <span className="font-light">{population.toLocaleString()}</span></p>

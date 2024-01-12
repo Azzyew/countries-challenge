@@ -12,10 +12,10 @@ export function Header({darkMode, toggleDarkMode}: HeaderProps) {
       <button className="flex items-center" onClick={toggleDarkMode}>
         {darkMode ? 
           (<>
-            <SunDim className="mr-1"/> Light Mode
+            <SunDim className="mr-1" weight="bold"/> Light Mode
           </>) :
           (<>
-            <MoonStars className="mr-1"/> Dark Mode
+            <MoonStars className="mr-1" weight="bold"/> Dark Mode
           </>)
         }
       </button>
