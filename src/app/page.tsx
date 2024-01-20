@@ -55,7 +55,7 @@ export default function Home() {
         </select>
       </form>
       <section className="flex flex-col mt-12 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-12 xl:gap-24">
-        {data.map((country: Country) => (
+        {data?.map((country: Country) => (
           <div key={country.name.common} onClick={() => router.push(`/${country.name.common}`)} >
             <CountryCard
               flagSrc={country.flags.png}
