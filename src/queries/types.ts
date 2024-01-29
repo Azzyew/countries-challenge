@@ -9,6 +9,11 @@ export type Country = {
   name: {
     common: string;
     official: string;
+    nativeName: {
+      [key: string]: {
+        common: string;
+      }
+    }
   };
   flags: {
     png: string;
@@ -17,4 +22,13 @@ export type Country = {
   population: number;
   region: Regions;
   capital: string;
+  subregion: string;
+  tld: string[];
+  currencies: {
+    [key: string]: {
+      name: string;
+    }
+  };
+  languages: string[];
+  borders: string[];
 };
