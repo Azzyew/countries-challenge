@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - REST Countries API with color theme switcher solution
 
-## Getting Started
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I wanted to use this challenge to both practice my current skills as well as try some new technologies and patterns. I *unfortunately* don't have much experience with unit testing, only e2e testing, so I'm also using this project to dive into it a bit more to hopefully implement it on all my future projects as well
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### The challenge
 
-## Learn More
+Users should be able to:
 
-To learn more about Next.js, take a look at the following resources:
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode *(optional)*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Screenshot
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![](./screenshot.jpg)
 
-## Deploy on Vercel
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+
+## My process
+
+
+### Built with
+
+- Semantic HTML5 markup
+- Mobile-first workflow
+- TypeScript
+- [React](https://reactjs.org)
+- [Next.js](https://nextjs.org)
+- [TailwindCSS](https://tailwindcss.com)
+- [Phosphor Icons](https://phosphoricons.com)
+- [TanStack Query](https://tanstack.com/query/v5)
+- [Jest](https://jestjs.io)
+- [Axios](https://axios-http.com/docs/intro)
+
+### Continued development
+
+I know that NextJS has a lot more useful tidbits and resources I could use to make this project even better, as well as TanStack Query. They're both libraries/frameworks with a lot of powerful utilities and I know I'm not using them to their full potential, so my goal is to keep improving my knowledge in it
+
+I also highly encourage feedbacks or just discussions about my code, so please feel free to open an issue or contact me!
+
+### Useful resources
+
+- [Dark Mode with TailwindCSS](https://dev.to/naomipham_/how-to-create-darklight-mode-with-react-and-tailwind-59e0) - This helped me to get a better understanding of how to build the dark/light mode with TailwindCSS
+- [REST Countries API docs](https://restcountries.com) - Always important to read the docs of the API to better understand its endpoints and field types
+
+## Author
+
+- LinkedIn [Laisa Costa](https://www.linkedin.com/in/laisa-costa-748a5a170)
+- Frontend Mentor - [@Azzyew](https://www.frontendmentor.io/profile/Azzyew)
+
+## Acknowledgments
+
+Just want to thank every developer I've ever worked with because I learned a little with every single one of them and got a better developer because of it! :heart:

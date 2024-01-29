@@ -6,10 +6,14 @@ export type Regions =
     | "Oceania";
 
 export type Country = {
-  nativeName: string;
   name: {
     common: string;
     official: string;
+    nativeName: {
+      [key: string]: {
+        common: string;
+      }
+    }
   };
   flags: {
     png: string;
@@ -19,8 +23,12 @@ export type Country = {
   region: Regions;
   capital: string;
   subregion: string;
-  topLevelDomain: string;
-  currencies: any;
+  tld: string[];
+  currencies: {
+    [key: string]: {
+      name: string;
+    }
+  };
   languages: string[];
   borders: string[];
 };

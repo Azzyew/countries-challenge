@@ -23,4 +23,10 @@ export class CountriesService {
 
     return response.data;
   }
+  
+  static async getCountryByCode(code: string): Promise<Country[]> {
+    const response = await CountriesService.client.get(`/alpha?codes=${code}`);
+
+    return response.data;
+  }
 }
