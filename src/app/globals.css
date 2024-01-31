@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.dark {
-  @apply bg-primary-400 text-white
-}
-
-.light {
-  @apply bg-primary-100 text-primary-500
+@layer utilities {
+  .dark {
+    @apply bg-primary-400 text-white;
+  }
+  
+  .light {
+    @apply bg-primary-100 text-primary-500;
+  }
 }
