@@ -7,6 +7,7 @@ const nunitoSans = Nunito_Sans({ weight: ['300', '600', '800'], subsets: ['latin
 import { QueryClientProvider } from '@tanstack/react-query';
 
 import { queryClient } from '@/queries';
+import { NextThemeProvider } from '@/providers/theme';
 
 export const metadata: Metadata = {
   title: 'Countries Challenge',
@@ -19,10 +20,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={nunitoSans.className}>
         <QueryClientProvider client={queryClient}>
-          {children}
+          <NextThemeProvider>
+            {children}
+          </NextThemeProvider>
         </QueryClientProvider>
       </body>
     </html>

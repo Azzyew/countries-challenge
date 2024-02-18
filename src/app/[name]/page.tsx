@@ -1,7 +1,5 @@
 'use client';
 
-import { Fragment, useState } from "react";
-
 import { useCountryQuery } from "@/queries/countries.query"
 import { Header } from "@/components/header";
 import { useRouter } from "next/navigation";
@@ -10,16 +8,10 @@ import Image from "next/image";
 import BorderContainer from "@/components/border-container";
 
 export default function CountryDetails({ params }: { params: { name: string } }) {
-  const [darkMode, setDarkMode] = useState(true);
-
   const router = useRouter();
 
   const { data, isLoading } = useCountryQuery({ name: params.name });
   
-  const toggleDarkMode = () => {
-    setDarkMode((prev) => !prev);
-  };
-
   if (!data || isLoading) {
     //make skeleton
     return;
@@ -29,8 +21,8 @@ export default function CountryDetails({ params }: { params: { name: string } })
   const nativeNameKey = Object.keys(data[0].name.nativeName)[0];
 
   return (
-    <main className={`flex flex-col text-sm min-h-dvh w-full md:text-base lg:text-lg ${darkMode ? "dark" : "light"}`}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    <main className={`flex flex-col text-sm min-h-dvh w-full md:text-base lg:text-lg`}>
+      <Header />
       <section className="px-6 md:px-8 lg:px-16 xl:px-20 lg:py-12">
         <button
           onClick={() => router.back()}

@@ -1,16 +1,15 @@
 'use client';
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { CountryCard, CountryCardSkeleton } from "@/components/country-card";
 import { Header } from "@/components/header";
 import { useDebounceValue } from "@/hooks/useDebounceValue";
 import { useCountryQuery } from "@/queries/countries.query";
 import { Country, Regions } from "@/queries/types";
 import { MagnifyingGlass } from "@phosphor-icons/react";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
   const [searchName, setSearchName] = useState('');
   const [searchRegion, setSearchRegion] = useState<Regions>();
 
@@ -28,13 +27,9 @@ export default function Home() {
     setSearchRegion(e.target.value as Regions);
   };
 
-  const toggleDarkMode = () => {
-    setDarkMode((prev) => !prev);
-  };
-
   return (
-    <main className={`flex flex-col text-sm items-center h-full w-full md:text-base lg:text-lg ${darkMode ? "dark" : "light"}`}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    <main className={`flex flex-col text-sm items-center h-full w-full md:text-base lg:text-lg`}>
+      <Header />
       <form className="px-4 w-full md:px-8 lg:px-16 lg:flex lg:items-center lg:justify-between xl:px-20" onSubmit={(e) => e.preventDefault()}>
         <div className="mt-5 flex bg-white rounded-md h-14 p-2 items-center drop-shadow-md dark:bg-primary-300 lg:w-1/3">
           <input

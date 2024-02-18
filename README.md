@@ -47,10 +47,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
-
 ### Built with
 
-- Semantic HTML5 markup
+- Semantic markup
 - Mobile-first workflow
 - TypeScript
 - [React](https://reactjs.org)
@@ -60,6 +59,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - [TanStack Query](https://tanstack.com/query/v5)
 - [Jest](https://jestjs.io)
 - [Axios](https://axios-http.com/docs/intro)
+- [next-themes](https://www.npmjs.com/package/next-themes)
 
 ### Continued development
 
@@ -69,7 +69,7 @@ I also highly encourage feedbacks or just discussions about my code, so please f
 
 ### Useful resources
 
-- [Dark Mode with TailwindCSS](https://dev.to/naomipham_/how-to-create-darklight-mode-with-react-and-tailwind-59e0) - This helped me to get a better understanding of how to build the dark/light mode with TailwindCSS
+- [Dark Mode](https://www.davegray.codes/posts/light-dark-mode-nextjs-app-router-tailwind) - This helped me to get a better understanding of how to build the dark/light mode with TailwindCSS and next-themes
 - [REST Countries API docs](https://restcountries.com) - Always important to read the docs of the API to better understand its endpoints and field types
 
 ## Author
