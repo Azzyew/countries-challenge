@@ -14,7 +14,11 @@
 
 @layer components {
   .skeleton-text {
-    @apply h-5 w-full bg-[#f5f5f5] dark:bg-[#334351];
+    @apply h-5 rounded-md w-full bg-[#f5f5f5] dark:bg-[#334351];
+  }
+
+  .detail-skeleton-text {
+    @apply h-5 w-48 rounded-md bg-[#f5f5f5] dark:bg-[#334351];
   }
 }
 

@@ -25,7 +25,11 @@ export class CountriesService {
   }
   
   static async getCountryByCode(code: string): Promise<Country[]> {
-    const response = await CountriesService.client.get(`/alpha?codes=${code}`);
+    const response = await CountriesService.client.get('/alpha', {
+      params: {
+        'codes': code,
+      },
+    });
 
     return response.data;
   }

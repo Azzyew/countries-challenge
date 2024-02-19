@@ -25,7 +25,10 @@ export function CountryCard({ flagSrc, name, population, region, capital }: Coun
 
 export function CountryCardSkeleton() {
   return (
-    <div className="drop-shadow-md bg-white rounded-md w-64 h-[440px] animate-pulse dark:bg-primary-300 xl:w-80">
+    <div
+      role="progressbar"
+      className="drop-shadow-md bg-white rounded-md w-64 h-[440px] animate-pulse dark:bg-primary-300 xl:w-80"
+    >
     <div className="rounded-t-md w-full h-60 bg-[#f5f5f5] dark:bg-[#334351]"/>
       <div className="p-6 space-y-4 h-[12.5rem]">
         <div className="skeleton-text"/>

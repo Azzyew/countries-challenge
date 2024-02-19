@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { CountryCard, CountryCardSkeleton } from "@/components/country-card";
 import { Header } from "@/components/header";
 import { useDebounceValue } from "@/hooks/useDebounceValue";
 import { useCountryQuery } from "@/queries/countries.query";
 import { Country, Regions } from "@/queries/types";
 import { MagnifyingGlass } from "@phosphor-icons/react";
+import { BonusCountryCard, BonusCountryCardSkeleton } from "@/components/bonus-country-card";
 
-export default function Home() {
+export default function Bonus() {
   const [searchName, setSearchName] = useState('');
   const [searchRegion, setSearchRegion] = useState<Regions>();
 
@@ -60,21 +60,17 @@ export default function Home() {
 
       {isLoading ? 
         <section className="h-dvh flex flex-col mt-12 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-12 xl:gap-24">
-          <CountryCardSkeleton />
-          <CountryCardSkeleton />
-          <CountryCardSkeleton />
-          <CountryCardSkeleton />
+          <BonusCountryCardSkeleton />
+          <BonusCountryCardSkeleton />
+          <BonusCountryCardSkeleton />
+          <BonusCountryCardSkeleton />
         </section>
       :
         <section className="flex flex-col mt-12 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-12 xl:gap-24">
           {data?.map((country: Country) => (
-            <div key={country.name.common} onClick={() => router.push(`/${country.name.common}`)} >
-              <CountryCard
-                flagSrc={country.flags.png}
-                name={country.name.common}
-                population={country.population}
-                region={country.region}
-                capital={country.capital}
+            <div key={country.name.common} >
+              <BonusCountryCard
+                countryData={country}
               />
             </div>
           ))}
